@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="US-ASCII"><title>Create Multiplication Tables</title><meta name="description" content="Create multilpication tables"><script>
+function repeat(s, t) {
+  var o = "";
+  for (var i = 0; i <= t; i++) {
+    o += s
+  }
+  return o
+}
+
+// Prompt for input
+var t = Number(prompt("Maximum multiplicant #: "));
+var m = Number(prompt("Maximum multiplier #: "));
+
+// Create table heading row
+document.write("<pre>\t\t");
+for (var i = 1; i <= m; i++) {
+  document.write(i + "\t")
+}
+// Add dashed line
+document.write("\n" + repeat("-", (i+1) * 8) + "\n");
+
+for (var n = 1; n <= t; n++) { // Change times table (_ * x)
+  document.write(n + "\t|\t"); // Create table heading collumn
+  for (i = 1; i <= m; i++) { // Change # of times table (x * _)
+    document.write(n * i + "\t") // Add table content
+  }
+  document.write("\n") // Move to next row
+}
+</script></head><body style="margin:0"><noscript style="font-family:monospace">You must have JavaScript enabled to run this program. This program prompts for a maximum multilicant and multiplier to create a multiplication table. If security is an issue, feel free to inspect the rather short uncompressed JavaScript with many comments embedded into the webpage.</noscript></body></html>

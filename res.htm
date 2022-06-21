@@ -1,0 +1,15 @@
+<!DOCTYPE html><html lang="en"><meta charset="utf-8"><head>
+  <title>What Is My Computer's Resolution?</title>
+  <meta name="description" content="What is my Computer's Resolution?"><meta name="viewport" content="width=device-width">
+</head><body style="font-family:sans-serif;text-align:center"><span></span>
+<div><strong>Height:</strong> <span id="h"></span></div>
+<div><Strong>Width:</strong> <span id="w"></span></div>
+<script>
+function w(e, t) {
+  e.appendChild(document.createTextNode(t))
+}
+var e = document.body.firstChild;
+e.style.fontSize = screen.width / 6 + "px";
+w(e, screen.height + " x " + screen.width)
+w(document.getElementById("h"), screen.height + " pixels")
+w(document.getElementById("w"), screen.width + " pixels")</script></body></html>
